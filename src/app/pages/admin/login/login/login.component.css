@@ -1,0 +1,157 @@
+:host {
+    --clr-facebook-blue: rgba(24, 119, 242, 1);
+    --clr-facebook-blue--hover: rgba(24, 119, 242, 0.9); /* Fixed typo in variable name */
+    --clr-green: rgba(80, 168, 94, 1);
+    --clr-green--hover: rgba(80, 168, 94, 0.9);
+  }
+  
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+    transition: 0.2s ease-in-out;
+  }
+  
+  input:focus,
+  select:focus,
+  textarea:focus,
+  button:focus {
+    outline: none;
+  }
+  
+  .parent {
+    background-color: rgb(220, 220, 220);
+    width: 100%;
+    height: 100vh;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: hsl(0, 0%, 25%);
+  }
+  
+  .login__card--container {
+    width: 100%;
+    max-width: 400px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0px 0px 15px hsla(0, 0, 0, 0.125);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 1.75em;
+  }
+  
+  .social__login {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 2em;
+    padding: 3em 3em 0 3em;
+  }
+  
+  .social__login .login__heading { /* Modified selector to remove `&` */
+    font-weight: bold;
+    font-size: 1.5rem;
+    opacity: 0.9;
+  }
+  
+  .btn {
+    width: 100%;
+    padding: 0.75em 0.5em;
+    cursor: pointer;
+    border: 0;
+    border-radius: 5px;
+    color: white;
+    font-family: inherit;
+    font-size: 1rem;
+  }
+  
+  .btn--facebook {
+    background-color: var(--clr-facebook-blue); /* Corrected variable usage */
+  }
+  
+  .btn--facebook:hover { /* Replaced nested selector with direct selector */
+    background-color: var(--clr-facebook-blue--hover);
+  }
+  
+  .btn--manual {
+    background-color: var(--clr-green);
+  }
+  
+  .btn--manual:hover { /* Replaced nested selector with direct selector */
+    background-color: var(--clr-green--hover);
+  }
+  
+  .alt__login__text {
+    width: 100%;
+    text-align: center;
+    font-size: 0.9rem;
+    opacity: 0.8;
+  }
+  
+  .manual__login {
+    width: 100%;
+    padding: 0 3em;
+  }
+  
+  .manual__login--form { /* Used a direct selector */
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+    transition: 0.2s ease-in-out;
+  }
+  
+  .manual__login--form input { /* Applied styles directly to input */
+    width: 100%;
+    padding: 0.75em 0.5em;
+    border: 0;
+    border-bottom: 2px solid var(--clr-green);
+    font-family: inherit;
+    color: hsla(0, 0, 0, 0.9);
+  }
+  
+  .manual__login--form input::placeholder { /* Corrected ::placeholder styles */
+    color: hsla(0, 0, 0, 0.5);
+    padding-left: 0;
+    font-size: 1rem;
+    transform: translateY(3px);
+    transition: 0.2s ease-in-out;
+  }
+  
+  .manual__login--form input:focus::placeholder { /* Added placeholder focus styles */
+    transform: translateY(-3px);
+  }
+  
+  .seperate__line {
+    padding: 0;
+    width: 100%;
+    background: black;
+  }
+  
+  .create__account {
+    width: 100%;
+    padding: 0 3em 2em 3em;
+    color: hsla(0, 0, 0, 0.5);
+    text-align: center;
+  }
+  
+  .signup__link {
+    color: var(--clr-green);
+    cursor: pointer;
+    text-decoration: none;
+    border-bottom: 1px solid var(--clr-green);
+  }
+  
+  .signup__link:hover { /* Replaced nested selector with direct selector */
+    opacity: 0.7;
+  }
+  

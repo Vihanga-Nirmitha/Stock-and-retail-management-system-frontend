@@ -1,0 +1,22 @@
+
+<div class="parent">
+    <div class="login__card--container">
+      <div class="social__login">
+        <h2 class="login__heading">Log In</h2>
+        <button class="btn btn--facebook">Facebook</button>
+      </div>
+      <p class="alt__login__text">or log in with</p>
+      <div class="manual__login">
+        <form action="#" class="manual__login--form">
+          <input type="text" name="userName" [(ngModel)]="loginObj.userName" placeholder="Username" id="username">
+          <input type="password" name="password" [(ngModel)]="loginObj.password"  placeholder="Password" id="password">
+          <button class="btn btn--manual" type="button" (click)="onLogin()">Log In</button>
+        </form>
+      </div>
+      <hr class="seperate__line">
+      <div class="create__account">
+        Don't have an account? Create <a href="" class="signup__link">here</a>
+      </div>
+    </div>
+  </div>
+
