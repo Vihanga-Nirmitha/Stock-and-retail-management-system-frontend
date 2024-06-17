@@ -1,12 +1,13 @@
 
 
 .product-card{
+	
     font-family: sans-serif;
 	background-color: #fff;
-    width: 350px;
-    margin: 20px;
+    width: 230px;
+    margin: 5px;
 	padding: 18px;
-	border-radius: 10px;
+	
 	box-shadow: 0 0 15px rgba(0, 0, 0, 0.25);
 }
 
@@ -17,11 +18,11 @@
 	border-radius: 2px;
 }
 .card .card-header{
-	padding: 30px 50px;
+	padding: 10px 10px;
 	text-align: center;
 }
 .card-header img{
-	max-height: 200px;
+	max-height: 150px;
 }
 .product-title{
 	font-size: 24px;
@@ -43,7 +44,7 @@
 }
 
 .card .btn{
-	padding: 10px 40px;
+	padding: 7px 15px;
 	border: none;
 	font-family: inherit;
 	border-radius: 5px;
@@ -71,4 +72,75 @@
 
 .card .card-footer .btn:first-child{
 	margin-right: 15px;
+}
+
+
+
+
+.body{
+	width: auto;
+	display: flex;
+	justify-content: space-around;
+}
+
+.content{
+	width: 1200px;
+	height: 500px;
+	/* background-color: blue; */
+	display: flex;
+	flex-direction: column;
+}
+.add-item-bar{
+	display: flex;
+	flex-direction: row-reverse;
+	margin: 4px 0px;
+}
+.add-item-bar button i{
+	margin: 5px;
+	scale: 1.4;
+}
+.add-item-bar button h6{
+	margin: 5px;
+	
+}
+.add-item{
+	height: 700px;
+	width: 800px;
+	position: absolute;
+	z-index: 20;
+	background-color: white;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	padding: 20px;
+	border: 2px solid black;
+}
+.close{
+	position: absolute;
+	left: 100%;
+	top: 0%;
+	transform: translate(-140%,10%);
+}
+.close button{
+	all: unset;
+}
+.close button i{
+	scale: 4;
+	color: red;
+}
+.close button i:hover{
+	scale: 5;
+}
+.banner{
+	height: fit-content;
+	width: auto;
+}
+.content{
+	height: fit-content;
+}
+@media (max-width: 1000px) and (min-width: 750px){
+   .add-item{
+	width: 80vw;
+   }
+    
 }

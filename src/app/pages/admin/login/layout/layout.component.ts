@@ -2,15 +2,16 @@ import { Component ,OnInit } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { ProductService } from '../../../../services/product/product.service';
 import { CommonModule } from '@angular/common';
-import { faFontAwesome } from '@fortawesome/free-solid-svg-icons';
+import  { FooterComponent } from '../footer/footer.component';
+
 
 
 @Component({
-  selector: 'app-layout',
-  standalone: true,
-  imports: [RouterOutlet, CommonModule ],
-  templateUrl: './layout.component.html',
-  styleUrl: './layout.component.css'
+    selector: 'app-layout',
+    standalone: true,
+    templateUrl: './layout.component.html',
+    styleUrl: './layout.component.css',
+    imports: [RouterOutlet, CommonModule, FooterComponent]
 })
 export class LayoutComponent implements OnInit {
 
@@ -22,7 +23,7 @@ export class LayoutComponent implements OnInit {
   onMouseEnter(event: MouseEvent ,categoryId: number) {
     const hoveredElement = event.target as HTMLElement;
     this.subCategoryList = this.categoryList.filter(cater => cater.parentCategoryId === categoryId);
-    console.log(this.subCategoryList);
+
   }
   ngOnInit(): void {
     

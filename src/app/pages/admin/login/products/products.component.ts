@@ -37,9 +37,7 @@ export class ProductsComponent implements OnInit{
       this.getAllCategory();
   }
   getAllProduct(){
-    
     this.productSrv.getAllProduct().subscribe((res:any)=>{
-      console.log(res.data)
       this.productList = res.data;
     })
   }
