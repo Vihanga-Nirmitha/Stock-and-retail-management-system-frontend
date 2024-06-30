@@ -17,5 +17,11 @@ export class ProductService {
   getAllProduct(){
     return this.http.get(Constant.API_END_POINT + Constant.METHODS.GET_ALL_PRODUCTS)
   }
+  getAllCart(){
+    return this.http.get(Constant.API_END_POINT + Constant.METHODS.GET_ALL_CART)
+  }
+  getProductById(ID: number){
+    return this.http.get(Constant.API_END_POINT + Constant.METHODS.GET_ALL_PRODUCTS+'/1')
+  }
 }
 

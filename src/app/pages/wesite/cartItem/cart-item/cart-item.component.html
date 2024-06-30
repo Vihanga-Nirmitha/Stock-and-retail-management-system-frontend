@@ -1,0 +1,39 @@
+
+<div class="cart-item d-flex align-items-center">
+    <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+    </div>
+    <div class="image-container">
+        <img [src]="product.image1" alt="">
+    </div>
+    <div class="detail d-flex flex-column">
+        <div class="title-container d-flex justify-content-between">
+            <h6>{{product.name}}</h6>
+            <i  class="fa-solid fa-trash-can borderless"></i>
+
+        </div>
+        <div class="variation">
+            <h6>Variation :</h6>
+            <select class="selectpicker show-tick">
+                <option *ngFor="let vari of variations" [value]="vari.id">{{vari.name}}</option>
+              </select>
+              <div class="spacer flex-grow-1"></div>
+              <div class="number-picker">
+                <button (click)="decrease()" [disabled]="value <= min"><i class="fa-solid fa-minus"></i></button>
+                <input type="text" [value]="value" (input)="onInputChange($event)" [min]="min" [max]="max" />
+                <button (click)="increase()" [disabled]="value >= max"><i class="fa-solid fa-plus"></i></button>
+              </div>
+              <div class="price-last">
+                <h5>Rs {{total }}.00</h5>
+              </div>
+
+              
+            
+        </div>
+        <div class="price">
+                <h6>Rs {{price}} /1pcs</h6>
+        </div>
+
+    </div>
+    
+</div>

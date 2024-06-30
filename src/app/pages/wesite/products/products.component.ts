@@ -1,7 +1,7 @@
 import { CommonModule, getLocaleDateTimeFormat } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { ProductService } from '../../../../services/product/product.service';
+import { ProductService } from '../../../services/product/product.service';
 
 @Component({
   selector: 'app-products',
