@@ -47,17 +47,7 @@ export class ProductsComponent implements OnInit{
     })
   }
 
-  onSave(){
-    this.productSrv.saveProduct(this.productObj).subscribe((res: any)=>{
-      debugger;
-      if(res.result){
-        alert("Product Created")
-        this.getAllProduct();
-      }else{
-        alert(res.message)
-      }
-    })
-  }
+  
   openSidePanel() {
     this.isSidepanelVisible = true;
   }

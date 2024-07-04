@@ -1,0 +1,20 @@
+
+
+.add-item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+	height: 700px;
+	width: 100vw;
+	z-index: 20;
+	margin-top: 50px;
+ 
+}
+.form-elm{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+    width: 1000px;
+}
+

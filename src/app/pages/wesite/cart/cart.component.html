@@ -15,7 +15,7 @@
                   <h4 class="m-5">Shopping Cart(5)</h4>
             </div>
             <div class="cart-list block-style">
-                <div *ngFor="let cart of cartList">
+                <div class="cart-item" *ngFor="let cart of cartList">
                     <app-cart-item [cart]="cart"></app-cart-item>
                 </div>
                 
@@ -23,8 +23,58 @@
 
         </div>
         <div class="summery-container col-4">
-            <div class="summery block-style">
-
+            <div class="summery block-style d-flex flex-column" #summery>
+                <div class="expand" #expand>
+                    <div class="items summery-item"> 
+                        <h5>Items(5)</h5>
+                        <button class="btn close" #closeBtn (click)="onClose()"> <i class="fa-solid fa-xmark"></i></button>
+                    </div>
+                    <div class="subtotal summery-item">
+                        <h6>SubTotal</h6>
+                        <h6>Rs.1300.00</h6>
+                    </div>
+                    <div class="delivery summery-item">
+                        <h6>Delivery fee</h6>
+                        <h6>Rs.200.00</h6>
+                    </div>
+                    <div class="discount summery-item">
+                        <h6>Discount</h6>
+                        <h6> - Rs.100.00</h6>
+                    </div>
+                </div>
+               
+                    
+                <div class="total summery-item">
+                    <h5>Total</h5>
+                    <div class="d-flex">
+                        <h5>Rs.1300.00</h5>
+                        <button class="btn expand-button" #expandbtn (click)="onExpand()"><i class="fa-solid fa-chevron-up"></i></button>
+                    </div>
+                    
+                </div>
+                <div class="delivery-method summery-item">
+                    <div class="form-check" >
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="cod"  #codRadio (change)="toggleButtons()" title="Cash On Delivery">
+                        <label class="form-check-label" for="cod">
+                          <h6>Cash On Delivery</h6>
+                          <img src="./assets/images/cod.png" alt="" srcset="" >
+                        </label>
+                        
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="paynow" #paynowRadio (change)="toggleButtons()" checked title="Pay Now">
+                        <label class="form-check-label" for="paynow">
+                          <h6>Pay Now</h6>
+                          <img src="./assets/images/card.png" alt="" srcset="">
+                        </label>
+                        
+                      </div>
+                </div>
+                <div class="checkout summery-item">
+                    <button type="button" class="checkout-btn" #checkoutBtn>Checkout</button>
+                    <button type="button" class="confirm-btn" #confirmBtn>Confirm Order</button>
+                </div>
+                    
             </div>
 
         </div>

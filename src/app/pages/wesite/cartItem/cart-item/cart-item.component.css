@@ -102,3 +102,44 @@ img{
   .price-last{
     margin: 0px 20px;
   }
+ 
+  @media (max-width: 750px){
+    .variation h6{
+      display: none;
+    }
+    .variation select{
+      margin: 0px;
+      scale: 0.8;
+    }
+    .variation{
+      margin-top: 5px;
+    }
+    img{
+      width: 90px;
+      height: 90px;
+    }
+    .cart-item{
+      height: 130px;
+    }
+    .cart-item  h5{
+      font-size: 1rem;
+      white-space: nowrap;
+    }
+    .cart-item  h6{
+      font-size: 0.9rem;
+      white-space: nowrap;
+    }
+    .number-picker button{
+      scale: 0.8;
+    }
+    .number-picker input{
+      width: 30px;
+    }
+    .number-picker{
+      margin-left: 10px;
+    }
+    .form-check{
+      margin: 0px 5px;
+    }
+     
+}
