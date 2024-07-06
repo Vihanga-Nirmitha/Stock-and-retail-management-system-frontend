@@ -1,4 +1,4 @@
-<div class="container-admin">
+<!-- <div class="container-admin">
     <div class="nav-admin">
         <div class="nav-admin-container">
             <div #navadditem class="nav-elm navadditem">
@@ -9,6 +9,9 @@
             </div>
             <div #navaddstock  class="nav-elm navaddstock">
                 <button class="btn btn-addstock" (click)="onAddStock()"><h5>ADD ITEM</h5></button>   
+            </div>
+            <div #navaddcategory  class="nav-elm navaddcategory">
+                <button class="btn btn-addcategory" (click)="onAddCategory()"><h5>ADD CATEGORY</h5></button>   
             </div>
         
         </div>
@@ -23,5 +26,27 @@
             <div #addstock class="addstock cont-elm" >
                 <p>addstock</p>
             </div>
+            <div #addcategory class="addcategory cont-elm" >
+                <app-add-category></app-add-category>
+            </div>
+    </div>
+</div> -->
+<div class="body d-flex">
+    <div class="nav-bar">
+        <div class="nav-element">
+            <button type="button" class="btn btn-manage-product"><h5>Manage Product</h5></button>
+        </div>
+        <div class="nav-element">
+            <button class="btn btn-add-product"><h5>Add Product</h5></button>
+        </div>
+        <div class="nav-element">
+            <button class="btn btn-manage-category"><h5>Manage Category</h5></button>
+        </div>
+        <div class="nav-element">
+            <button class="btn btn-manage-brand"><h5>Manage Brand</h5></button>
+        </div>
+    </div>
+    <div class="content">
+        <router-outlet></router-outlet>
     </div>
 </div>

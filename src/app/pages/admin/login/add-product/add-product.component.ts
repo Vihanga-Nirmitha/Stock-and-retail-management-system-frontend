@@ -1,17 +1,16 @@
-import { Component } from '@angular/core';
-import { ProductService } from '../../../../../services/product/product.service';
-import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
-
+import { Component } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+import { ProductService } from '../../../../services/product/product.service';
 
 @Component({
-  selector: 'app-add-item',
+  selector: 'app-add-product',
   standalone: true,
   imports: [FormsModule, CommonModule],
-  templateUrl: './add-item.component.html',
-  styleUrl: './add-item.component.css'
+  templateUrl: './add-product.component.html',
+  styleUrl: './add-product.component.css'
 })
-export class AddItemComponent {
+export class AddProductComponent {
   productObj: any = {
     "productId": 0,
     "categoryId": 0,
@@ -39,7 +38,7 @@ export class AddItemComponent {
     })
   }
   getAllCategory(){
-    this.productSrv.getCategory().subscribe((res:any)=>{
+    this.productSrv.getCategory(true).subscribe((res:any)=>{
       this.categoryList = res.data;
     })
   }
@@ -72,5 +71,4 @@ export class AddItemComponent {
       "listedDate": new Date()
     };
   }
- 
 }

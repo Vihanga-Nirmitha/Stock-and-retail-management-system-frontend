@@ -4,6 +4,8 @@ import { LayoutComponent } from './pages/admin/login/layout/layout.component';
 import { ProductsComponent } from './pages/wesite/products/products.component';
 import { CartComponent } from './pages/wesite/cart/cart.component';
 import { AdminPageComponent } from './pages/admin/login/admin-page/admin-page.component';
+import { AddProductComponent } from './pages/admin/login/add-product/add-product.component';
+import { CategoryComponent } from './pages/admin/login/category/category.component';
 
 
 export const routes: Routes = [
@@ -43,12 +45,23 @@ export const routes: Routes = [
     },
     {
         
-        path:'',
-        component:LayoutComponent,
+        path:'admin',
+        component:AdminPageComponent,
         children:[
             {
-                path:'admin',
-                component:AdminPageComponent
+                path:'addproduct',
+                component:AddProductComponent
+            }
+        ]
+    },
+    {
+        
+        path:'admin',
+        component:AdminPageComponent,
+        children:[
+            {
+                path:'category',
+                component:CategoryComponent
             }
         ]
     }

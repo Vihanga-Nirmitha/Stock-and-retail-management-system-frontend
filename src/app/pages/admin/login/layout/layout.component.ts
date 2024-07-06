@@ -31,7 +31,7 @@ export class LayoutComponent implements OnInit {
  
   }
   getAllCategory(){
-    this.productSrv.getCategory().subscribe((res:any)=>{
+    this.productSrv.getCategory(true).subscribe((res:any)=>{
       this.categoryList = res.data;
     })
   }
