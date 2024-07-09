@@ -42,7 +42,7 @@ export class ProductsComponent implements OnInit{
     })
   }
   getAllCategory(){
-    this.productSrv.getCategory(true).subscribe((res:any)=>{
+    this.productSrv.getParentCategory(false).subscribe((res:any)=>{
       this.categoryList = res.data;
     })
   }

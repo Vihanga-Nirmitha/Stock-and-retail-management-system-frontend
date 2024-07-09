@@ -9,11 +9,28 @@ import { Observable } from 'rxjs';
 export class ProductService {
 
   constructor(private http: HttpClient) { }
-  getCategory(isParent: boolean): Observable<any>{
-    const params = new HttpParams().set('isParent', isParent.toString());
+  getCategory(isParent: boolean, ispaginated:boolean , page:number,size:number , name:string): Observable<any>{
+    const params = new HttpParams()
+              .set('isParent', isParent.toString())
+              .set('isPaginated', ispaginated.toString())
+              .set('page', page.toString())
+              .set('size', size.toString())
+              .set('name', name.toString());
+    
 
     return this.http.get(Constant.API_END_POINT + Constant.METHODS.CATEGORY, { params })
   }
+  getParentCategory(isParent: boolean): Observable<any>{
+    const params = new HttpParams()
+              .set('isParent', isParent.toString());
+    
+    return this.http.get(Constant.API_END_POINT + Constant.METHODS.CATEGORY, { params })
+  }
+  editCategory(obj: any , id:string){
+    console.log(id)
+    return this.http.put(Constant.API_END_POINT + Constant.METHODS.CATEGORY+'/'+id,obj)
+  }
+
   saveCategory(obj: any){
     return this.http.post(Constant.API_END_POINT + Constant.METHODS.CATEGORY,obj)
   }

@@ -19,6 +19,7 @@ label {
 .container {
     padding: 20px 0px 50px 50px;
     min-height: 820px;
+    width: 1300px;
     display: flex;
     flex-direction: column;
     align-items: start;
@@ -70,7 +71,7 @@ label {
 .addbtn , .cancelbtn{
     align-self: end;
 }
-.add-category , .edit-category{
+.add-brand , .edit-brand{
     display: flex;
     flex-direction: column;
     width: 1000px;
@@ -85,18 +86,40 @@ label{
     margin-bottom: 20px;
    
 }
+.row{
+    padding: 0px 50px;
+}
+.brand{
+   display: flex;
+    height: 80px;
 
-.category{
-    padding: 8px 20px;
-    padding-top: 12px;
-    width: 1000px;
-    justify-content: space-between;
-    margin-top: 7px;
+    margin-top: 30px;
+    align-items: center;
     border-radius: 10px;
-    border: 1px solid #ddd;
+    background-color: #ffffff; 
+    border: 1px solid #ddd; 
+ 
     transition: background-color 0.3s, box-shadow 0.3s;
 
 } 
+.brand:hover {
+    background-color: #f1f1f1;    
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+.brand img{
+   
+    margin-left: 20px; 
+  height: 70px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+.brand h4{
+    margin: 0;
+    font-size: 1.3rem;
+    color: #333;
+}
 .title-container{
     user-select: none;
     width: 1100px;
@@ -107,17 +130,18 @@ label{
     width: 300px;
     height: 40px;
 }
-.category:hover{
-    background-color: rgb(215, 217, 219);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}  
-.icon i{
-    margin-left: 50px;
-    user-select: none;
-}
-.icon i:hover{
-    color: red;
-}
+ 
+.brand .icon i {
+    margin: 0px 20px;
+    font-size: 1.2rem;
+    color: #dc3545;
+    cursor: pointer;
+    transition: color 0.3s;
+  }
+  
+  .brand .icon i:hover {
+    color: #c82333;
+  }
 .form , .form-edit{
     
     display: none;
@@ -143,12 +167,7 @@ label{
 .addbtn.hide{
     display: none;
 }
-/* .cancelbtn{
-    display: none;
-}
-.cancelbtn.active{
-    display: inline-block;
-} */
+
 .pagination-container{
     margin-top: 50px;
     width: 1100px;

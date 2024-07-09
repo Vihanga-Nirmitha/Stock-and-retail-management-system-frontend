@@ -1,0 +1,14 @@
+
+<div >
+    <ul class="pagination justify-content-end">
+        <!-- disabled -->
+      <li class="page-item">
+        <button (click)="changePage(currentPage - 1)" [disabled]="currentPage < 1" class="page-link">Previous</button>
+      </li>
+      <li *ngFor="let page of pagesArray" class="page-item" [class.active]="page === currentPage+1"><button (click)="onSetPageNumber(page)" class="page-link">{{page}}</button></li>
+      
+      <li class="page-item">
+        <button (click)="changePage(currentPage + 1)" [disabled]="currentPage >= totalPages-1" class="page-link">Next</button>
+      </li>
+    </ul>
+  </div>

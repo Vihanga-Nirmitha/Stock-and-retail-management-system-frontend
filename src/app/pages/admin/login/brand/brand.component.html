@@ -1,0 +1,83 @@
+<h3>Manage Brand</h3>
+<div class="container d-flex flex-column">
+    <div #form class="form">
+        <h4 class="mb-4">Add Brand</h4>
+        <div class="add-brand">
+            <div class="d-flex">
+                <div class="m-2 flex-fill">
+                    <label for="name">Name</label>
+                    <input  type="text" id="name" class="form-control " required>
+                </div>
+                <div class="m-2">
+                    <!-- imahge upload -->
+                </div>
+            </div>
+            <div class="d-flex justify-content-end">
+                <button class="btn btn-danger cancelbtn" #cancelbtn (click)="onCancel()">Cancel</button>
+                <button #addBrandButton type="button" class="btn btn-success" (click)="onSave()">Save</button>
+            </div>
+              
+        </div>
+    </div>
+
+    <div class="d-flex title-container">
+        <h4 class="mb-4 mt-4">All Brands</h4>
+        <div class="d-flex">
+            
+            <input class="form-control search-imp"  #searchImp type="search" (input)="onSearch(searchImp.value)" placeholder="Search" aria-label="Search">
+            <button class="btn btn-success addbtn" #addbtn (click)="onAddBrand()">ADD</button>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-6" *ngFor="let brand of allBrandList">
+            <div class="brand">
+              <img [src]="brand.imageRef" alt="">
+              <h4>{{ brand.name }}</h4>
+              <div class="flex-fill"></div>
+              <div class="icon">
+                <i (click)="onDelete(brand.id)" class="fa-solid fa-xmark"></i>
+            </div>
+            </div>
+          </div>
+    </div>
+    
+
+    <div class="flex-fill"></div>
+    <div class="pagination-container">
+        <div class="d-flex mb-4">
+            <select class="form-select" (change)="onPageSizeChange($event)">
+                <option selected value="10">10</option>
+                <option value="20">25</option>
+                <option value="30">50</option>
+                <option value="40">100</option>
+              </select>
+        </div>
+        <app-pagination [currentPage]="pageDetails.currentPage" 
+      [totalPages]="pageDetails.totalPages" 
+      (pageChanged)="onPageChange($event)"></app-pagination>
+    </div>
+    
+    <div #formEdit class="form-edit">
+        <h4 class="mb-4">Edit Category</h4>
+        <div class="edit-category">
+            <div class="d-flex">
+                <div class="m-2 flex-fill">
+                    <label for="name">Name</label>
+                    <input  type="text" id="name" class="form-control " required>
+                </div>
+                <div class="m-2">
+                    <!-- image upload -->
+                    
+                </div>
+            </div>
+            <div class="d-flex justify-content-end">
+                <button class="btn btn-danger cancelbtn" #cancelbtn2 (click)="onCancel()">Cancel</button>
+                <!-- <button #addEditButton type="button" class="btn btn-success"  (click)="onEdit()">Edit</button> -->
+            </div>
+            
+      
+            
+        </div>
+    </div>
+      
+</div>

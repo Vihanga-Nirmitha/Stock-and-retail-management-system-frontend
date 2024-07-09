@@ -5,6 +5,8 @@ export const Constant = {
         CATEGORY:'categories',
         CREATE_PRODUCT:'CreateProduct',
         GET_ALL_CART:'GetAllCart',
-        GET_PRODUCT:'GetAllProduct'
+        GET_PRODUCT:'GetAllProduct',
+
+        BRAND: 'brands'
     }
 }

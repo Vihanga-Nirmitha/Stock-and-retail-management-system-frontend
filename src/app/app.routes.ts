@@ -6,6 +6,7 @@ import { CartComponent } from './pages/wesite/cart/cart.component';
 import { AdminPageComponent } from './pages/admin/login/admin-page/admin-page.component';
 import { AddProductComponent } from './pages/admin/login/add-product/add-product.component';
 import { CategoryComponent } from './pages/admin/login/category/category.component';
+import { BrandComponent } from './pages/admin/login/brand/brand.component';
 
 
 export const routes: Routes = [
@@ -62,6 +63,17 @@ export const routes: Routes = [
             {
                 path:'category',
                 component:CategoryComponent
+            }
+        ]
+    },
+    {
+        
+        path:'admin',
+        component:AdminPageComponent,
+        children:[
+            {
+                path:'brand',
+                component:BrandComponent
             }
         ]
     }
